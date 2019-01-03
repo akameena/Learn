@@ -1,0 +1,8 @@
+=======for find out all table name with spescipic columns
+
+SELECT DISTINCT 
+	TABLE_NAME,COLUMN_NAME, DATA_TYPE,COLUMN_TYPE 
+    FROM information_schema.columns 
+    WHERE table_schema = 'jmailer_ibmse_2' 
+     and 
+    COLUMN_NAME IN ('MSISDN','MobileNo','msisdn') and CHARACTER_MAXIMUM_LENGTH<=16;

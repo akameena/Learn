@@ -1,0 +1,87 @@
+======================================================================Trigger in mysql================================================================================
+
+
+
+nlp
+https://codepen.io/AshikNesin/pen/KzgeYX
+
+
+CREATE TRIGGER trigger_name trigger_time trigger_event
+ ON table_name
+ FOR EACH ROW
+ BEGIN
+ ...
+ END
+ 
+ 
+ in this example trigger time is the time when we want to take action it can be before and  after 
+ and trigger event is the event which can be insert delete and update 
+ and table name is name of table on which we want to action 
+ we put sql  statement in between begin and end block what action we want to take for table.  
+ 
+ 
+ a example for trigger 
+ 
+ 
+ DELIMITER $$
+CREATE TRIGGER before_employee_update 
+    BEFORE UPDATE ON employees
+    FOR EACH ROW 
+BEGIN
+    INSERT INTO employees_audit
+    SET action = 'update',
+     employeeNumber = OLD.employeeNumber,
+        lastname = OLD.lastname,
+        changedat = NOW(); 
+END$$
+DELIMITER ;
+
+======================================
+
+two way we can syncronizes hashmap  
+1> java collection syncronized method
+2> useing concurrenthashmap
+
+how to convert a hashmap keyset into array 
+>>>>  Object[] crunchifyKeys = companies.keySet().toArray()
+
+-----------------------------------
+
+IO stream in java
+3type of dtream are there
+system.in 
+system.out
+system.err 
+___________________________
+App engin : google app engin for python and java
+
+
+sap intgration
+
+
+
+
+https://www.edureka.co/blog/what-is-microservices/    // about microservices
+
+soap rest
+
+api gateway
+
+
+
+
+
+instanceof is method use for to check object type, it return true or false hoe to use as name suggest.
+
+-----------------------------------------------------
+regex:
+Account\s*No\s*:\s*[0-9]{16}  for account no
+
+
+https://www.javatpoint.com/java-regex
+https://regexr.com/45huh
+
+
+
+ps -ef cmd use for list od all running process 
+neatstat cmd  use for network static
